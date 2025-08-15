@@ -1,4 +1,9 @@
+import path from "path";
 import swaggerJSDoc from "swagger-jsdoc";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const options = {
   definition: {
@@ -30,7 +35,7 @@ const options = {
       },
     ],
   },
-  apis: ["./routes/*.js"], // Chỉ định nơi chứa comment mô tả API
+  apis: [path.join(__dirname, "routes/*.js")], // đường dẫn tuyệt đối
 };
 
 export const swaggerSpec = swaggerJSDoc(options);

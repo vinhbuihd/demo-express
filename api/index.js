@@ -1,10 +1,10 @@
 import express from "express";
-import { connectDB } from "./db.js";
+import { connectDB } from "../db.js";
 import swaggerUi from "swagger-ui-express";
 import multer from "multer";
 
-import usersRouter from "./routes/users.js";
-import { swaggerSpec } from "./swagger.js";
+import usersRouter from "../routes/users.js";
+import { swaggerSpec } from "../swagger.js";
 import path from "path";
 import fs from "fs";
 
@@ -51,6 +51,8 @@ app.post("/upload", upload.single("myfile"), (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 Server is running at http://localhost:${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`🚀 Server is running at http://localhost:${PORT}`);
+// });
+
+export default app;
