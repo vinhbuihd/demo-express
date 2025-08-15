@@ -4,7 +4,7 @@ import swaggerUi from "swagger-ui-express";
 
 import usersRouter from "./routes/users.js";
 import { swaggerSpec } from "./swagger.js";
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8000;
 
 connectDB();
 
