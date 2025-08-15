@@ -23,7 +23,8 @@ const router = express.Router();
  *         description: OK
  */
 
-router.get("/users", auth, getUsers);
+// router.get("/users", auth, getUsers);
+router.get("/users", getUsers);
 
 /**
  * @swagger
